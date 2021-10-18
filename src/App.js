@@ -21,9 +21,7 @@ function App() {
   // const label2 = "Button Class 2";
   // const labelfc = "Button Function";
 
-  function Click(){
-    console.log('Clicked')
-  }
+  
 
   return (
     <div className="container">
@@ -49,9 +47,7 @@ function App() {
       
 
       <InputText/>
-      <button className="btn btn-primary mt-3" onClick={Click}>
-        Save
-      </button>
+      
 
 
     </div>
