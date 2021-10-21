@@ -1,17 +1,27 @@
 // import ButtonClass from "./Components/common/button_class";
 // import ButtonFunction from "./Components/common/button_fc";
 
+import ChangeCounter from './Components/common/Change';
+import Todo from './Components/common/Todo';
+import React, { useState,useEffect } from 'react'
+
+// import Counter from './Components/common/counter';
+// import FormFunction from './Components/common/form_function';
 // import ClassComponent from "./Components/layout/ClassComponent";
 // import FormComponent from "./Components/layout/FormComponent";
 // import ListName from "./Components/layout/ListName";
 // import Notification from "./Components/layout/Notification";
 // import Todo from "./Components/layout/Todo";
-import InputText from "./Components/common/Input_text";
+// import InputText from "./Components/common/Input_text";
+// import PageLifeCycle from "./Components/pages/PageLifeCycle";
+
 // import Counter from "./Components/Counter";
 // import CounterAppFunction from "./Components/Counter_fc";
 
 
+
 function App() {
+  const [view, setview] = useState(true)
   // const users = [
   //   { id: "1", firstname: "agus", lastname: "Nuerjaman" },
   //   { id: "2", firstname: "udin", lastname: "jaja" },
@@ -21,7 +31,7 @@ function App() {
   // const label2 = "Button Class 2";
   // const labelfc = "Button Function";
 
-  
+
 
   return (
     <div className="container">
@@ -46,7 +56,19 @@ function App() {
 
       
 
-      <InputText/>
+      {/* <InputText/> */}
+      
+      {/* <Counter/>
+      <FormFunction/> */}
+      {/* <ChangeCounter/> */}
+
+      {view === true ? <Todo/> : <p>No Todos</p>}
+      <button 
+      className='btn btn-primary'
+      onClick={()=>{
+        setview(!view)
+      }}>Show Todo</button>
+      {/* <PageLifeCycle/> */}
       
 
 
