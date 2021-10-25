@@ -4,6 +4,7 @@ import Content from "./Components/2110_sesi2/Content";
 
 import Header from "./Components/2110_sesi2/Header";
 import StyledComponent from "./Components/2210/2210_sesi2/StyledComponent";
+import RRDTodo from "./Components/2510/sesi1/RRDTodo";
 // import { H1 } from "./Components/2210_sesi1/heading";
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
 
   return (
 
-      <React.Fragment>
+    <RRDTodo/>
+
+      // <React.Fragment>
      
-        <StyledComponent/>
-      </React.Fragment>
+      //   <StyledComponent/>
+      // </React.Fragment>
 
 
     // // <div className="container">

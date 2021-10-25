@@ -29,7 +29,8 @@ const StyledButton = styled.button.attrs((props) => {
     withRounded: rounded,
     bg:theme === 'dark' ? 'blue' : 'green'
   };
-})`
+}
+)`
   /* Adapt the colors based on primary prop */
   background: ${(props) => (props.primary ? "palevioletred" : "white")};
   color: ${(props) => (props.primary ? "white" : "palevioletred")};
@@ -64,7 +65,7 @@ export const H1 = (props) => {
     <>
       <StyledCenter>Ahmad Muji</StyledCenter>
       <StyledH1 primary={true}>Hello World</StyledH1>
-      <StyledButton rounded="4px"> Styled Button</StyledButton>
+      <StyledButton rounded="4px" bg='red'> Styled Button</StyledButton>
       <StyledButton onClick={() => alert("Holla")}> Styled Button</StyledButton>
       <StyledContainer />
     </>
