@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import TodoItem from "../components/TodoItem";
 
@@ -12,21 +12,21 @@ export default function ListPage() {
       {
         userId: 1,
         id: 1,
-        name:'Ahmad 1',
+
         title: "delectus aut autem",
         completed: true,
       },
       {
         userId: 1,
         id: 2,
-        name:'Ahmad 2',
+
         title: "quis ut nam facilis et officia qui",
         completed: false,
       },
       {
         userId: 1,
         id: 3,
-        name:'Ahmad 3',
+
         title: "fugiat veniam minus",
         completed: false,
       },

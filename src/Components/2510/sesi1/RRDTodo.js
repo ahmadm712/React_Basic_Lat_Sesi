@@ -11,6 +11,7 @@ import {
 import InfoPage from "./pages/info-page";
 import UpdatePage from "./pages/update-page";
 import NotFoundPage from "./pages/not-found";
+import AboutMePage from "./pages/about-me";
 
 export default function RRDTodo() {
   return (
@@ -20,6 +21,9 @@ export default function RRDTodo() {
           <Link to="/">Home</Link>
         </li>
         <li>
+          <Link to="/about">About Me</Link>
+        </li>
+        <li>
           <Link to="/create">Create Todo</Link>
         </li>
       </ul>
@@ -27,6 +31,10 @@ export default function RRDTodo() {
       <Switch>
         <Route exact path="/">
           <ListPage />
+        </Route>
+
+        <Route path="/about">
+          <AboutMePage/>
         </Route>
 
         <Route path="/list">

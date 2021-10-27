@@ -2,7 +2,13 @@ import styled from "styled-components";
 import EditIcon from "../components/icons/edit";
 import EyeIcon from "../components/icons/eye";
 import TrashIcon from "../components/icons/trash";
-import { Link } from "react-router-dom";
+import {
+  Link,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useRouteMatch,
+} from "react-router-dom";
 
 const StyledTodoDesc = styled.span`
   padding: 2px;
@@ -14,19 +20,20 @@ const StyledTodoDesc = styled.span`
 const StyledTodoItem = styled.li`
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 500px;
   padding: 8px;
   border: 1px solid black;
 `;
 
 export default function TodoItem(props) {
-    const todo = props.todo;
+  const todo = props.todo;
+  let { path, url } = useRouteMatch();
 
   return (
     <StyledTodoItem>
-      <StyledTodoDesc completed={todo.completed}>{todo.name}</StyledTodoDesc>
+      <StyledTodoDesc completed={todo.completed}>{todo.title}</StyledTodoDesc>
       <span>
-        <Link to="/info">
+        <Link to={`/info/${todo.id}`}>
           <EyeIcon />
         </Link>
         <Link to="/update">
@@ -35,6 +42,11 @@ export default function TodoItem(props) {
 
         <TrashIcon />
       </span>
+      <Switch>
+        <Route path={`/info/:id`}>
+          <p>Hello Dunia</p>
+        </Route>
+      </Switch>
     </StyledTodoItem>
   );
 }
